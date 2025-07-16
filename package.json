@@ -2,8 +2,12 @@
   "name": "chatwoot-admin",
   "version": "0.0.0",
   "packageManager": "pnpm@10.13.1",
+  "scripts": {
+    "build": "turbo build"
+  },
   "devDependencies": {
     "@chatwoot-admin/tsconfig": "workspace:*",
+    "turbo": "^2.5.5",
     "typescript": "^5.8.3"
   }
 }
