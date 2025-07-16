@@ -1,5 +1,9 @@
 {
   "name": "chatwoot-admin",
   "version": "0.0.0",
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "@chatwoot-admin/tsconfig": "workspace:*",
+    "typescript": "^5.8.3"
+  }
 }

@@ -1,0 +1,3 @@
+{
+  "extends": "@chatwoot-admin/tsconfig/base.json"
+}
