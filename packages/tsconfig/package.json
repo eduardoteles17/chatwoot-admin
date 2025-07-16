@@ -2,6 +2,8 @@
   "name": "@chatwoot-admin/tsconfig",
   "private": true,
   "files": [
-    "base.json"
+    "base.json",
+    "lib.json",
+    "next.json"
   ]
 }
