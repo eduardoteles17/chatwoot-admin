@@ -4,11 +4,11 @@
     ".": {
       "require": {
         "types": "./dist/index.d.ts",
-        "require": "./dist/index.js"
+        "default": "./dist/index.js"
       },
       "import": {
         "types": "./dist/index.d.mts",
-        "require": "./dist/index.mjs"
+        "default": "./dist/index.mjs"
       }
     }
   },
