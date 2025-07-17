@@ -1,0 +1,9 @@
+{
+  "extends": "@chatwoot-admin/tsconfig/node.json",
+  "compilerOptions": {
+    "paths": {
+      "@chatwoot-admin/utils/*": ["./src/*"]
+    }
+  },
+  "include": ["**/*.ts"]
+}
