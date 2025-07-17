@@ -1,0 +1,12 @@
+{
+  "name": "@chatwoot-admin/worker",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm build && pnpm start",
+    "build": "tsup ./src/main.ts",
+    "start": "node ./dist/main.js"
+  },
+  "devDependencies": {
+    "@chatwoot-admin/tsconfig": "workspace:*"
+  }
+}

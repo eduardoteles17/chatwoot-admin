@@ -52,6 +52,12 @@ importers:
         specifier: ^4
         version: 4.1.11
 
+  apps/worker:
+    devDependencies:
+      '@chatwoot-admin/tsconfig':
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+
   packages/env:
     dependencies:
       '@chatwoot-admin/tsconfig':

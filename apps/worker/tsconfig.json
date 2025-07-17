@@ -1,0 +1,12 @@
+{
+  "extends": "@chatwoot-admin/tsconfig/node.json",
+  "compilerOptions": {
+    "paths": {
+      "@chatwoot-admin/queue/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "./**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
