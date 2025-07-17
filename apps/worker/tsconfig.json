@@ -2,7 +2,7 @@
   "extends": "@chatwoot-admin/tsconfig/node.json",
   "compilerOptions": {
     "paths": {
-      "@chatwoot-admin/queue/*": ["./src/*"]
+      "@chatwoot-admin/worker/*": ["./src/*"]
     }
   },
   "include": [
