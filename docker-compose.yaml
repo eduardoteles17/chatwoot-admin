@@ -4,6 +4,7 @@ services:
     ports:
       - "5432:5432"
     environment:
+      POSTGRESQL_DATABASE: chatwoot-admin
       POSTGRESQL_PASSWORD: chatwoot-admin
     volumes:
       - postgresql_data:/bitnami/postgresql
