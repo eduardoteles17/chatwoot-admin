@@ -1,5 +1,7 @@
+import {redis} from "@chatwoot-admin/worker/redis";
+
 async function main() {
-  console.log("Hello World!")
+  await redis.set("hello", "world")
 }
 
 main()
