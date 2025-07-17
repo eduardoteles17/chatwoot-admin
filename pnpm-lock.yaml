@@ -80,22 +80,6 @@ importers:
         specifier: ^13.0.0
         version: 13.0.0
 
-  packages/env:
-    dependencies:
-      '@chatwoot-admin/tsconfig':
-        specifier: workspace:*
-        version: link:../tsconfig
-      '@t3-oss/env-core':
-        specifier: ^0.13.8
-        version: 0.13.8(typescript@5.8.3)(zod@4.0.5)
-      zod:
-        specifier: ^4.0.5
-        version: 4.0.5
-    devDependencies:
-      '@types/node':
-        specifier: ^20.19.8
-        version: 20.19.8
-
   packages/queue: {}
 
   packages/tsconfig: {}
