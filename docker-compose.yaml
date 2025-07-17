@@ -1,0 +1,12 @@
+services:
+  valkey:
+    image: bitnami/valkey:8.1.3
+    ports:
+      - "6379:6379"
+    environment:
+      VALKEY_PASSWORD: example
+    volumes:
+      - valkey_data:/bitnami/valkey/data
+
+volumes:
+  valkey_data:
