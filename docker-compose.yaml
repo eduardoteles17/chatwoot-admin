@@ -4,7 +4,7 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRESQL_PASSWORD: example
+      POSTGRESQL_PASSWORD: chatwoot-admin
     volumes:
       - postgresql_data:/bitnami/postgresql
   valkey:
@@ -12,7 +12,7 @@ services:
     ports:
       - "6379:6379"
     environment:
-      VALKEY_PASSWORD: example
+      VALKEY_PASSWORD: chatwoot-admin
     volumes:
       - valkey_data:/bitnami/valkey/data
 
