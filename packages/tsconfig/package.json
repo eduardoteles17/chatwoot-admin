@@ -3,7 +3,7 @@
   "private": true,
   "files": [
     "base.json",
-    "lib.json",
+    "node.json",
     "next.json"
   ]
 }
