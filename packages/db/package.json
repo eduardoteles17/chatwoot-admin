@@ -1,0 +1,9 @@
+{
+  "name": "@chatwoot-admin/db",
+  "scripts": {
+    "build": "tsup ./src/index.ts"
+  },
+  "devDependencies": {
+    "@chatwoot-admin/tsconfig": "workspace:*"
+  }
+}

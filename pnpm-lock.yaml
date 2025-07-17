@@ -80,6 +80,12 @@ importers:
         specifier: ^13.0.0
         version: 13.0.0
 
+  packages/db:
+    devDependencies:
+      '@chatwoot-admin/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
+
   packages/queue: {}
 
   packages/tsconfig: {}
