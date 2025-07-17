@@ -1,11 +1,22 @@
-import { type ResultAsync, okAsync, errAsync} from "neverthrow"
+type Success<T> = {
+  data: T;
+  error: null;
+};
 
-export async function tryCatch<T, E = Error>(promise: T): Promise<ResultAsync<T, E>> {
+type Failure<E> = {
+  data: null;
+  error: E;
+};
+
+type Result<T, E = Error> = Success<T> | Failure<E>;
+
+export async function tryCatch<T, E = Error>(
+  promise: Promise<T>,
+): Promise<Result<T, E>> {
   try {
     const data = await promise;
-
-    return okAsync(data)
+    return {data, error: null};
   } catch (error) {
-    return errAsync(error as E)
+    return {data: null, error: error as E};
   }
 }

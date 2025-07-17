@@ -17,8 +17,5 @@
   },
   "devDependencies": {
     "@chatwoot-admin/tsconfig": "workspace:*"
-  },
-  "dependencies": {
-    "neverthrow": "^8.2.0"
   }
 }
