@@ -4,5 +4,6 @@ import {env} from "@chatwoot-admin/worker/env";
 export const redis = new Redis({
   host: env.REDIS_HOST,
   port: env.REDIS_PORT,
-  password: env.REDIS_PASSWORD
+  password: env.REDIS_PASSWORD,
+  lazyConnect: true
 })

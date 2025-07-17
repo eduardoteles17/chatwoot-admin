@@ -54,6 +54,9 @@ importers:
 
   apps/worker:
     dependencies:
+      '@chatwoot-admin/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       '@dotenvx/dotenvx':
         specifier: ^1.47.6
         version: 1.47.6
