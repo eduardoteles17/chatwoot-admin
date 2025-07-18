@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "packageManager": "pnpm@10.13.1",
   "scripts": {
-    "build": "turbo build"
+    "build": "turbo build",
+    "lint": "biome check --write ."
   },
   "devDependencies": {
+    "@biomejs/biome": "2.1.2",
     "@chatwoot-admin/tsconfig": "workspace:*",
     "tsup": "^8.5.0",
     "turbo": "^2.5.5",
