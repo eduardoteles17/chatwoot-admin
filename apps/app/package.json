@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:migrate:apply": "atlas migrate apply",
+    "db:migrate:new": "atlas migrate diff --env dev"
   },
   "dependencies": {
     "next": "15.4.1",
