@@ -10,10 +10,20 @@
         "types": "./dist/index.ts",
         "default": "./dist/index.js"
       }
+    },
+    "./schema": {
+      "import": {
+        "types": "./dist/schema.d.mts",
+        "default": "./dist/schema.mjs"
+      },
+      "require": {
+        "types": "./dist/schema.d.ts",
+        "default": "./dist/schema.js"
+      }
     }
   },
   "scripts": {
-    "build": "tsup ./src/index.ts"
+    "build": "tsup ./src/{index,schema}.ts"
   },
   "dependencies": {
     "drizzle-orm": "^0.44.3",
