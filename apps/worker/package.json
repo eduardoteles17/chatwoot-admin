@@ -2,7 +2,7 @@
   "name": "@chatwoot-admin/worker",
   "private": true,
   "scripts": {
-    "dev": "pnpm build && dotenvx run -f .env.development -- pnpm start | pino-pretty",
+    "dev": "pnpm turbo build && dotenvx run -f .env.development -- pnpm start | pino-pretty",
     "build": "tsup ./src/main.ts",
     "start": "node ./dist/main.js"
   },
