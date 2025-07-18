@@ -5,12 +5,16 @@ export const env = createEnv({
   server: {
     LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace", 'silent']).default("info"),
 
+    DATABASE_URL: z.url(),
+
     REDIS_HOST: z.string().default("localhost"),
     REDIS_PORT: z.coerce.number().default(6379),
     REDIS_PASSWORD: z.string().optional()
   },
   runtimeEnv: {
     LOG_LEVEL: process.env.LOG_LEVEL,
+
+    DATABASE_URL: process.env.DATABASE_URL,
 
     REDIS_HOST: process.env.REDIS_HOST,
     REDIS_PORT: process.env.REDIS_PORT,
