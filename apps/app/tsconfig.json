@@ -1,6 +1,9 @@
 {
   "extends": "@chatwoot-admin/tsconfig/next.json",
   "compilerOptions": {
+    "paths": {
+      "@chatwoot-admin/app/*": ["./src/*"]
+    },
     "plugins": [
       {
         "name": "next"
