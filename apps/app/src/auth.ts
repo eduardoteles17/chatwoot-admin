@@ -6,5 +6,9 @@ import NextAuth from "next-auth";
 export const { handlers, signIn, signOut, auth } = NextAuth({
   secret: env.AUTH_SECRET,
   adapter: PrismaAdapter(db),
+  pages: {
+    signIn: "/auth/login",
+    signOut: "auth/login",
+  },
   providers: [],
 });
