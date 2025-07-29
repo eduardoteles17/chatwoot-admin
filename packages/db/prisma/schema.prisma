@@ -14,12 +14,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum UserRole {
+  Admin
+  User
+}
+
 model User {
   id            String    @id @default(uuid(7)) @db.Uuid
   name          String?
   email         String    @unique
   emailVerified DateTime?
   image         String?
+  role          UserRole  @default(User)
   accounts      Account[]
   sessions      Session[]
 
@@ -65,3 +71,9 @@ model VerificationToken {
 
   @@id([identifier, token])
 }
+
+// model ChatwootAccount {
+//   id       String @id @default(uuid(7)) @db.Uuid
+//   serverId Int
+//   name     String
+// }
