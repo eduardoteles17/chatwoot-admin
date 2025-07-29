@@ -1,7 +1,18 @@
 {
   "name": "@chatwoot-admin/db",
   "private": true,
+  "exports": {
+    ".": ["./src/index.ts"],
+    "./*": ["./src/*"]
+  },
+  "scripts": {
+    "db:generate": "prisma generate"
+  },
   "devDependencies": {
     "@chatwoot-admin/tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.13.0",
+    "prisma": "^6.13.0"
   }
 }
