@@ -1,9 +1,0 @@
-{
-  "name": "@chatwoot-admin/tsconfig",
-  "private": true,
-  "files": [
-    "base.json",
-    "node.json",
-    "next.json"
-  ]
-}

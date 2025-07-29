@@ -1,7 +1,0 @@
-{
-  "name": "@chatwoot-admin/db",
-  "devDependencies": {
-    "@chatwoot-admin/tsconfig": "workspace:*",
-    "tsx": "^4.20.3"
-  }
-}
