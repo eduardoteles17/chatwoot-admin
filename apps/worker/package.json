@@ -5,6 +5,7 @@
     "dev": "dotenvx run -f ../../.env -f .env -- bun run ./src/main.ts"
   },
   "devDependencies": {
+    "@chatwoot-admin/db": "workspace:*",
     "@chatwoot-admin/tsconfig": "workspace:*"
   }
 }

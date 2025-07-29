@@ -14,6 +14,7 @@
     "apps/worker": {
       "name": "@chatwoot-admin/worker",
       "devDependencies": {
+        "@chatwoot-admin/db": "workspace:*",
         "@chatwoot-admin/tsconfig": "workspace:*",
       },
     },
