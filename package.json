@@ -1,0 +1,11 @@
+{
+  "name": "chatwoot-admin",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
