@@ -7,5 +7,9 @@
   "devDependencies": {
     "@chatwoot-admin/db": "workspace:*",
     "@chatwoot-admin/tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.13.8",
+    "zod": "^4.0.13"
   }
 }
