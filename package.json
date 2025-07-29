@@ -2,6 +2,10 @@
   "name": "chatwoot-admin",
   "version": "0.0.0",
   "packageManager": "pnpm@10.13.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "lint": "biome check --write ."
@@ -12,5 +16,8 @@
     "tsup": "^8.5.0",
     "turbo": "^2.5.5",
     "typescript": "^5.8.3"
-  }
+  },
+  "trustedDependencies": [
+    "@tailwindcss/oxide"
+  ]
 }
