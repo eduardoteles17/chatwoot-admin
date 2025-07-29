@@ -16,12 +16,20 @@
         "@chatwoot-admin/tsconfig": "workspace:*",
       },
     },
+    "packages/db": {
+      "name": "@chatwoot-admin/db",
+      "devDependencies": {
+        "@chatwoot-admin/tsconfig": "workspace:*",
+      },
+    },
     "packages/tsconfig": {
       "name": "@chatwoot-admin/tsconfig",
       "version": "0.0.1",
     },
   },
   "packages": {
+    "@chatwoot-admin/db": ["@chatwoot-admin/db@workspace:packages/db"],
+
     "@chatwoot-admin/tsconfig": ["@chatwoot-admin/tsconfig@workspace:packages/tsconfig"],
 
     "@chatwoot-admin/worker": ["@chatwoot-admin/worker@workspace:apps/worker"],

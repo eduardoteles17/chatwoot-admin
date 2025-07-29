@@ -1,0 +1,7 @@
+{
+  "name": "@chatwoot-admin/db",
+  "private": true,
+  "devDependencies": {
+    "@chatwoot-admin/tsconfig": "workspace:*"
+  }
+}
