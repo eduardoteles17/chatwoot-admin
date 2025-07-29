@@ -1,0 +1,10 @@
+{
+  "extends": "@chatwoot-admin/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@chatwoot-admin/worker/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

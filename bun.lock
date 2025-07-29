@@ -9,6 +9,12 @@
         "typescript": "^5.8.3",
       },
     },
+    "apps/worker": {
+      "name": "@chatwoot-admin/worker",
+      "devDependencies": {
+        "@chatwoot-admin/tsconfig": "workspace:*",
+      },
+    },
     "packages/tsconfig": {
       "name": "@chatwoot-admin/tsconfig",
       "version": "0.0.1",
@@ -16,6 +22,8 @@
   },
   "packages": {
     "@chatwoot-admin/tsconfig": ["@chatwoot-admin/tsconfig@workspace:packages/tsconfig"],
+
+    "@chatwoot-admin/worker": ["@chatwoot-admin/worker@workspace:apps/worker"],
 
     "@types/bun": ["@types/bun@1.2.19", "", { "dependencies": { "bun-types": "1.2.19" } }, "sha512-d9ZCmrH3CJ2uYKXQIUuZ/pUnTqIvLDS0SK7pFmbx8ma+ziH/FRMoAq5bYpRG7y+w1gl+HgyNZbtqgMq4W4e2Lg=="],
 
