@@ -1,37 +1,7 @@
 {
   "name": "@chatwoot-admin/db",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/index.mts",
-        "default": "./dist/index.mjs"
-      },
-      "require": {
-        "types": "./dist/index.ts",
-        "default": "./dist/index.js"
-      }
-    },
-    "./schema": {
-      "import": {
-        "types": "./dist/schema.d.mts",
-        "default": "./dist/schema.mjs"
-      },
-      "require": {
-        "types": "./dist/schema.d.ts",
-        "default": "./dist/schema.js"
-      }
-    }
-  },
-  "scripts": {
-    "build": "tsup ./src/{index,schema}.ts"
-  },
-  "dependencies": {
-    "drizzle-orm": "^0.44.3",
-    "uuid": "^11.1.0"
-  },
   "devDependencies": {
     "@chatwoot-admin/tsconfig": "workspace:*",
-    "@types/pg": "^8.15.4",
     "tsx": "^4.20.3"
   }
 }
