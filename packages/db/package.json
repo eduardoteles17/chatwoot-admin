@@ -2,11 +2,17 @@
   "name": "@chatwoot-admin/db",
   "private": true,
   "exports": {
-    ".": ["./src/index.ts"],
-    "./*": ["./src/*"]
+    ".": [
+      "./src/index.ts"
+    ],
+    "./*": [
+      "./src/*"
+    ]
   },
   "scripts": {
-    "db:generate": "prisma generate"
+    "db:generate": "prisma generate",
+    "db:migrate:new": "dotenvx run -f ../../.env -f .env -- prisma migrate dev --create-only",
+    "db:migrate:deploy": "dotenvx run -f ../../.env -f .env -- prisma migrate deploy"
   },
   "devDependencies": {
     "@chatwoot-admin/tsconfig": "workspace:*"
