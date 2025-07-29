@@ -2,7 +2,7 @@
   "name": "@chatwoot-admin/worker",
   "private": true,
   "scripts": {
-    "dev": "bun run ./src/main.ts"
+    "dev": "dotenvx run -f ../../.env -f .env -- bun run ./src/main.ts"
   },
   "devDependencies": {
     "@chatwoot-admin/tsconfig": "workspace:*"
