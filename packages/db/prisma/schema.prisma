@@ -20,14 +20,15 @@ enum UserRole {
 }
 
 model User {
-  id            String    @id @default(uuid(7)) @db.Uuid
-  name          String?
-  email         String    @unique
-  emailVerified DateTime?
-  image         String?
-  role          UserRole  @default(User)
-  accounts      Account[]
-  sessions      Session[]
+  id               String                  @id @default(uuid(7)) @db.Uuid
+  name             String?
+  email            String                  @unique
+  emailVerified    DateTime?
+  image            String?
+  role             UserRole                @default(User)
+  accounts         Account[]
+  sessions         Session[]
+  chatwootAccounts UserInChatwootAccount[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -72,8 +73,28 @@ model VerificationToken {
   @@id([identifier, token])
 }
 
-// model ChatwootAccount {
-//   id       String @id @default(uuid(7)) @db.Uuid
-//   serverId Int
-//   name     String
+model ChatwootAccount {
+  id       String @id @default(uuid(7)) @db.Uuid
+  serverId Int
+  name     String
+
+  users UserInChatwootAccount[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model UserInChatwootAccount {
+  userId            String @db.Uuid
+  chatwootAccountId String @db.Uuid
+
+  user            User            @relation(fields: [userId], references: [id])
+  chatwootAccount ChatwootAccount @relation(fields: [chatwootAccountId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@id([userId, chatwootAccountId])
+}
+
 // }
