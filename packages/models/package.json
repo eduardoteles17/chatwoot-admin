@@ -1,0 +1,13 @@
+{
+  "name": "@chatwoot-admin/models",
+  "private": true,
+  "exports": {
+    ".": ["./src/index.ts"]
+  },
+  "dependencies": {
+    "zod": "^4.0.14"
+  },
+  "devDependencies": {
+    "@chatwoot-admin/tsconfig": "workspace:*"
+  }
+}
