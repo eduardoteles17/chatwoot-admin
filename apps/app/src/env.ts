@@ -23,7 +23,9 @@ export const env = createEnv({
     OAUTH_USER_EMAIL_PATH: z.string().min(1).optional().default("email"),
     OAUTH_USER_IMAGE_PATH: z.string().min(1).optional().default("image"),
   },
-  client: {},
+  client: {
+    NEXT_PUBLIC_APP_URL: z.url().default("http://localhost:3000"),
+  },
   runtimeEnv: {
     AUTH_SECRET: process.env.NODE_ENV,
 
@@ -38,5 +40,7 @@ export const env = createEnv({
     OAUTH_USER_NAME_PATH: process.env.OAUTH_USER_NAME_PATH,
     OAUTH_USER_EMAIL_PATH: process.env.OAUTH_USER_EMAIL_PATH,
     OAUTH_USER_IMAGE_PATH: process.env.OAUTH_USER_IMAGE_PATH,
+
+    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
   },
 });
