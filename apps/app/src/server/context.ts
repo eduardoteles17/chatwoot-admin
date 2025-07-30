@@ -6,7 +6,7 @@ export type CreateContextProps = {
 };
 
 export function createContext(props: CreateContextProps) {
-  return (opts: FetchCreateContextFnOptions) => {
+  return (_opts: FetchCreateContextFnOptions) => {
     return {
       session: props.session,
     };
