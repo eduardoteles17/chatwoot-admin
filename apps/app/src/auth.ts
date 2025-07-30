@@ -1,17 +1,31 @@
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { db } from "@chatwoot-admin/app/db";
 import { env } from "@chatwoot-admin/app/env";
+import type { User, UserRole } from "@chatwoot-admin/models";
 import NextAuth from "next-auth";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   secret: env.AUTH_SECRET,
   adapter: PrismaAdapter(db),
   session: {
-    strategy: "jwt"
+    strategy: "jwt",
   },
   pages: {
     signIn: "/auth/login",
     signOut: "auth/login",
+  },
+  callbacks: {
+    jwt({ token, user }) {
+      if (user) token.role = user.role;
+      return token;
+    },
+    session({ session, token }) {
+      if (token) {
+        session.user.id = token.sub as string;
+        session.user.role = token.role as UserRole;
+      }
+      return session;
+    },
   },
   providers: [
     {
@@ -35,7 +49,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           name: profile.name,
           email: profile.email,
           image: profile.picture,
-        };
+        } as unknown as User;
       },
     },
   ],
