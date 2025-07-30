@@ -1,0 +1,9 @@
+{
+  "name": "@chatwoot-admin/queue",
+  "private": true,
+  "exports": {
+    ".": [
+      "./src/index.ts"
+    ]
+  }
+}

@@ -4,7 +4,7 @@ export default async function Home() {
   const result = await trpc.chatwoot.listAccounts.query();
   return (
     <div>
-      <h1>Hello World! {result}</h1>
+      <h1>Hello World! {JSON.stringify(result)}</h1>
     </div>
   );
 }

@@ -10,6 +10,8 @@
     ]
   },
   "scripts": {
+    "dev": "bun db:studio",
+    "db:studio": "dotenvx run -f ../../.env -f .env -- prisma studio",
     "db:generate": "prisma generate",
     "db:migrate:new": "dotenvx run -f ../../.env -f .env -- prisma migrate dev --create-only",
     "db:migrate:deploy": "dotenvx run -f ../../.env -f .env -- prisma migrate deploy"
