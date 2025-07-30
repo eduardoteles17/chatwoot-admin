@@ -1,6 +1,12 @@
 import { env } from "@chatwoot-admin/app/env";
 import { PrismaClient } from "@chatwoot-admin/db";
 
-export const db = new PrismaClient({
-  datasourceUrl: env.DATABASE_URL,
-});
+let db: PrismaClient
+
+if (typeof window === "undefined") {
+  db = new PrismaClient({
+    datasourceUrl: env.DATABASE_URL,
+  });
+}
+
+export {db}
