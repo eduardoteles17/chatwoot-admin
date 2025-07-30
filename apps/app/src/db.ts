@@ -1,7 +1,7 @@
 import { env } from "@chatwoot-admin/app/env";
 import { PrismaClient } from "@chatwoot-admin/db";
 
-let db: PrismaClient
+let db: PrismaClient;
 
 if (typeof window === "undefined") {
   db = new PrismaClient({
@@ -9,4 +9,4 @@ if (typeof window === "undefined") {
   });
 }
 
-export {db}
+export { db };
